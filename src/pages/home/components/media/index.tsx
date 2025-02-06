@@ -1,9 +1,7 @@
-import "./styles.sass"
+import "./styles.sass";
 
 const Media = () => {
-  return (
-    <div className="media ">Media</div>
-  )
-}
+  return <div id="media" className="media section"></div>;
+};
 
-export default Media
+export default Media;

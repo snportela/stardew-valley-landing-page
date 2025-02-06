@@ -1,14 +1,24 @@
 import About from "./components/about";
+import Contact from "./components/contact";
+import Creator from "./components/creator";
 import Hero from "./components/hero";
+import Languages from "./components/languages";
 import Media from "./components/media";
+import Requirements from "./components/requirements";
+import Reviews from "./components/reviews";
 import "./styles.sass";
 
 const Home = () => {
   return (
-    <div className="home">
+    <div id="home" className="home">
       <Hero />
       <About />
       <Media />
+      <Requirements />
+      <Languages />
+      <Creator />
+      <Reviews />
+      <Contact />
     </div>
   );
 };
