@@ -65,7 +65,7 @@ const Header = () => {
     <header className="header">
       {isMediumScreen ? (
         <div className="navbar">
-          <div className="logo">
+          <div onClick={() => changeSection()} className="logo">
             <img src={Logo} alt="logo" />
             <Link to="/">Pelican Town</Link>
           </div>
