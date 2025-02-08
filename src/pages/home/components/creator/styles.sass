@@ -1,5 +1,31 @@
 @use "../../../../styles/variables" as *
 
 .creator
-    height: 100vh
     background-image: linear-gradient($blue, $light-blue)
+    color: $white
+    padding: 5% 0
+
+    h1
+        text-align: center
+        padding-bottom: 5%
+
+    .container
+        width: 85%
+        margin: auto
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+        column-gap: 5rem
+        font-size: 1.5rem
+        text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px
+        text-align: justify
+
+        p
+            padding: 2% 0
+            line-height: 2rem
+
+        img
+            width: 100%
+            height: auto
+
+       
+        

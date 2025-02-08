@@ -1,5 +1,68 @@
 @use "../../../../styles/variables" as *
     
 .contact
-    height: 100vh
     background-image: linear-gradient($light-green, $green)
+    color: $white
+
+    h1
+        text-align: center
+        padding: 5% 0
+    
+    .container
+        width: 80%
+        margin: auto
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+        gap: 5rem
+
+        .contact-left
+            text-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px
+
+            h2
+                text-align: center
+
+            p
+                display: flex
+                align-items: center
+                padding: 4% 0
+
+                img
+                    padding: 0 3%
+
+        .contact-right
+            background-color: $off-white
+            padding: 5%
+            form
+                width: 100%
+
+                input, textarea
+                    width: 100%
+                    margin: 3% 0
+                    padding: 2%
+                    outline: none
+                    border: none
+                    font-size: 1rem
+                    background-color: $light-green
+                    color: $white
+
+                    &::placeholder
+                        color: $white
+
+                input
+                    height: 3rem
+
+                textarea
+                    height: 9rem
+
+                button
+                    margin: auto
+                    display: block
+                    background-color: $dark-blue
+                    color: $white
+                    border: none
+                    padding: 3%
+                    font-size: 1rem
+
+                    &:hover
+                        cursor: pointer
+                        transform: scale(.97)

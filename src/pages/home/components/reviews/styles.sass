@@ -1,5 +1,41 @@
 @use "../../../../styles/variables" as *
 
 .reviews
-    height: 100vh
     background-image: linear-gradient($light-blue, $light-green)
+    color: $white
+    padding: 5%
+
+    h1
+        text-align: center
+
+    .container
+        position: relative
+        padding: 5%
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+        gap: 5rem
+
+        &::after
+            content: ""
+            width: 95%
+            height: .15em
+            background: $white
+            position: absolute
+            bottom: 0
+            left: 2.5%
+
+        a 
+            text-decoration: none
+            color: inherit
+            font-weight: bolder
+            font-size: 1.5rem
+            display: flex
+            align-items: center
+            padding-bottom: 2%
+            gap: 5px
+
+            &:hover
+                transform: scale(1.02)
+
+        p
+            font-size: 1.25rem
