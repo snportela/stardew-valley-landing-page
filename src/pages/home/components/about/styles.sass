@@ -1,7 +1,46 @@
 @use "../../../../styles/variables" as *
     
 .about
-    height: 100vh
     background-image: linear-gradient($light-brown, $brown)
+    padding: 4% 2%
+    text-align: center
+    color: $dark-green
 
+    .description
+        width: 70%
+        margin: auto
+        
+        h1
+            color: $dark-green
+            padding: 2%
+            margin-bottom: 5%
+
+
+            .text-highlight
+                font-size: 2.5rem
+
+        h2
+            color: $dark-green
+
+    .features 
+        width: 80%
+        margin: auto
+        padding: 3% 0      
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr))
+        grid-template-rows: 1fr
+        column-gap: 3.5rem
+
+        div
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding: 3%
+            font-weight: bolder
+            text-shadow: rgba(0, 0, 0, 0.1) 1.95px 1.95px 2.6px
+            font-size: 1.25rem
+
+            img
+                margin-bottom: 1rem
+        
    

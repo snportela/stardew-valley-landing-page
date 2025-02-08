@@ -1,5 +1,31 @@
 @use "../../../../styles/variables" as *
 
 .requirements
-    height: 100vh
     background-image: linear-gradient($dark-brown, $dark-blue)
+    color: $white
+
+    h1
+        text-align: center
+        padding-top: 5% 
+
+    .container
+        width: 80%
+        margin: 5rem auto
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr))
+        column-gap: 2rem
+
+    .card
+        padding: 10%
+        background-color: $dark-blue
+        display: flex
+        flex-direction: column
+        align-items: center
+        border-radius: 20px 
+
+        ul
+            list-style: none
+            margin: 10% 0
+
+            li
+                margin-top: 5%
