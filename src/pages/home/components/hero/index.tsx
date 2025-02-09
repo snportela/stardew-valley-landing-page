@@ -2,15 +2,39 @@ import "./styles.sass";
 import HeroLogo from "../../../../assets/hero-logo.png";
 import Parallax from "../../../../assets/parallax4.png";
 import Divider from "../../../../assets/sdv_divider.png";
+import Cloud from "../../../../assets/cloud.png";
+import Bird from "../../../../assets/stardew_bird.gif";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => {
+    setOffsetY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="hero section">
-      <div className="wrapper">
-        <img className="hero-logo" src={HeroLogo} alt="Stardew Valley" />
-        {/* <img className="mountains" src={Parallax} alt="Mountain background" /> */}
-        {/* <img className="ground" src={Divider} alt="Divider background" /> */}
-      </div>
+      <img className="cloud" src={Cloud} alt="Cloud" />
+      <img className="bird" src={Bird} alt="Bird" />
+      <img
+        className="hero-logo"
+        src={HeroLogo}
+        alt="Stardew Valley"
+        style={{ transform: `translateY(-${offsetY * 0.7}px)` }}
+      />
+      <img
+        className="mountains"
+        src={Parallax}
+        alt="Mountain background"
+        style={{ transform: `translateY(-${offsetY * 0.4}px)` }}
+      />
+      <img className="ground" src={Divider} alt="Divider background" />
     </div>
   );
 };

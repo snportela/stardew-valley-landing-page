@@ -2,19 +2,71 @@
 
 .hero
     background-image: url("../../../../assets/stardewbackground.png")
-    height: 200vh
-    background-size: cover
-    overflow-x: hidden
-    overflow-y: hidden
+    position: relative
+    height: 178vh
+    display: flex
+    justify-content: center
+    align-items: center
+    background-repeat: no-repeat
+    flex-direction: column
 
-    .wrapper
+    .cloud
+        position: absolute
+        top: 120px
+        animation: 90s linear 0.5s infinite forwards slide
 
-    
-        .hero-logo
+    .bird
+        position: absolute
+        animation: 15s linear 0.5s infinite forwards slide-back  
+        left: 0
+        right: 0
+
+    .hero-logo
+        position: absolute
+        top: 175px
+        width: 35%
+
+    .mountains, .ground
+        object-fit: cover
+
+
+    .mountains
+        position: absolute
+        top: 200px
+
+    .ground
+        position: absolute
+        bottom: 0
+
+
+    @keyframes slide 
+        0% 
+            transform: translateX(0)
+            opacity: 0.2
         
-        .mountains
+        33% 
+            transform: translateX(30%) 
+            opacity: 0.4
 
+        66% 
+            transform: translateX(60%)
+            opacity: 0.4
 
-        .ground
-
+        100% 
+            transform: translateX(100%)
+            opacity: 0.2
     
+    @keyframes slide-back 
+        0% 
+            transform: translateX(1500px)
+        
+        33% 
+            transform: translateX(1000px) 
+
+        66% 
+            transform: translateX(500px)
+
+        100% 
+            transform: translateX(0px)
+    
+
