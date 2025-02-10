@@ -1,7 +1,7 @@
 import "./styles.sass";
-import WindowsLogo from "../../../../assets/windows.png";
-import MacLogo from "../../../../assets/mac-os-logo.png";
-import LinuxLogo from "../../../../assets/linux-platform.png";
+import WindowsLogo from "../../../../../public/assets/images/windows.png";
+import MacLogo from "../../../../../public/assets/images/mac-os-logo.png";
+import LinuxLogo from "../../../../../public/assets/images/linux-platform.png";
 
 const Requirements = () => {
   return (
@@ -14,7 +14,7 @@ const Requirements = () => {
             <li>OS *: Windows Vista or greater</li>
             <li>Processor: 2 Ghz</li>
             <li>Memory: 2 GB RAM</li>
-            <li>Graphics: 256 mb video memory, shader model 3.0+</li>
+            <li>Graphics: 256 mb video memory, shader model 3.0 </li>
             <li>DirectX: Version 10</li>
             <li>Storage: 500 MB available space</li>
           </ul>
@@ -22,7 +22,7 @@ const Requirements = () => {
         <div className="card">
           <img src={MacLogo} alt="MacOS Logo" />
           <ul>
-            <li>OS: Mac OSX 10.10+</li>
+            <li>OS: Mac OSX 10.10</li>
             <li>Processor: 2 Ghz</li>
             <li>Memory: 2 GB RAM</li>
             <li>Graphics: 256 mb video memory, OpenGL 2</li>

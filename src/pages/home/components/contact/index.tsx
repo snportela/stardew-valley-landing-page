@@ -1,7 +1,7 @@
 import "./styles.sass";
-import Phone from "../../../../assets/phone-call.png";
-import Location from "../../../../assets/location.png";
-import Mail from "../../../../assets/mail.png";
+import Phone from "../../../../../public/assets/icons/phone-call.png";
+import Location from "../../../../../public/assets/icons/location.png";
+import Mail from "../../../../../public/assets/icons/mail.png";
 
 const Contact = () => {
   return (

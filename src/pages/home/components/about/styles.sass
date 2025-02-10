@@ -1,26 +1,28 @@
 @use "../../../../styles/variables" as *
     
 .about
-    background-image: linear-gradient($light-brown, $brown)
+    font-size: 1.5rem
+    background-color: $light-brown
     padding: 4% 2%
     text-align: center
-    color: $dark-green
+    color: $dark-blue
 
     .description
         width: 70%
         margin: auto
+        text-shadow: rgba(0, 0, 0, 0.21) 1.95px 1.95px 2.6px
+
         
         h1
-            color: $dark-green
             padding: 2%
             margin-bottom: 5%
 
 
             .text-highlight
-                font-size: 2.5rem
+                font-size: 3.5rem
 
         h2
-            color: $dark-green
+            color: $dark-blue
 
     .features 
         width: 80%
@@ -30,6 +32,8 @@
         grid-template-columns: repeat(auto-fit, minmax(125px, 1fr))
         grid-template-rows: 1fr
         column-gap: 3.5rem
+        text-shadow: rgba(0, 0, 0, 0.21) 1.95px 1.95px 2.6px
+
 
         div
             display: flex
@@ -37,8 +41,7 @@
             align-items: center
             padding: 3%
             font-weight: bolder
-            text-shadow: rgba(0, 0, 0, 0.1) 1.95px 1.95px 2.6px
-            font-size: 1.25rem
+            font-size: 1.75rem
 
             img
                 margin-bottom: 1rem

@@ -4,6 +4,7 @@ import Creator from "./components/creator";
 import Hero from "./components/hero";
 import Languages from "./components/languages";
 import Media from "./components/media";
+import Platforms from "./components/platforms";
 import Requirements from "./components/requirements";
 import Reviews from "./components/reviews";
 import "./styles.sass";
@@ -14,6 +15,7 @@ const Home = () => {
       <Hero />
       <About />
       <Media />
+      <Platforms />
       <Requirements />
       <Languages />
       <Creator />

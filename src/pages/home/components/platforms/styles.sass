@@ -1,0 +1,22 @@
+@use "../../../../styles/variables" as *
+
+.platforms
+    padding: 10% 0
+    color: $dark-blue
+    font-size: 1.75rem
+    background-color: $light-brown
+
+    h1
+        text-align: center
+        padding-bottom: 2%
+
+    .container
+        width: 80%
+        margin: auto
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr))
+        gap: 2rem
+        align-items: center
+
+        img
+            object-fit: cover

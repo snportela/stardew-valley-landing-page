@@ -1,7 +1,7 @@
 @use "../../../../styles/variables" as *
 
 .hero
-    background-image: url("../../../../assets/stardewbackground.png")
+    background-image: url("../../../../../public/assets/images/stardewbackground.png")
     position: relative
     height: 178vh
     display: flex
@@ -23,8 +23,7 @@
 
     .hero-logo
         position: absolute
-        top: 175px
-        width: 35%
+        top: 150px
 
     .mountains, .ground
         object-fit: cover
@@ -68,5 +67,90 @@
 
         100% 
             transform: translateX(0px)
+
+
+
+
+@media screen and ( max-width: 500px )
+    .hero
+        height: 133vh
+
+        .hero-logo
+            top: 100px
+            width: 80%
+            height: 20%
+
+        .ground, .mountains
+            height: 70%
+            max-width: 100%
+            object-position: 35% 0%
+
+        .mountains
+            top: 120px
+
+        .cloud, .bird
+            display: none
+
+@media  (min-width: 500px) and (max-width: 1200px) 
+    .hero
+        height: 110vh
+
+        .ground, .mountains
+            height: 50%
+            width: 100%
+            // object-position: 52% 0%
+
+        .mountains
+            position: absolute
+            top: 600px
+
+        .cloud, .bird
+            display: none
+
+
+@media  (min-width: 800px) and (max-width: 1300px) and (max-height: 1400px)
+    .hero
+        height: 119vh
+
+        .ground, .mountains
+            height: 60%
+            width: 100%
+            object-position: 52% 0%
+
+        .mountains
+            position: absolute
+            top: 500px
+
+        .cloud, .bird
+            display: none
+
+
+// @media  (min-width: 540px) and (max-height: 1000)
+    // .hero
+    //     height: 119vh
+
+    //     .hero-logo
+    //         top: 100px
+    //         width: 30%
+    //         height: 20%
+
+    //     .ground, .mountains
+    //         height: 60%
+    //         width: 100%
+    //         object-position: 52% 0%
+
+    //     .mountains
+    //         position: absolute
+    //         top: 500px
+
+    //     .cloud, .bird
+    //         display: none
+
+// @media all and (orientation: landscape) 
+
+ 
+ 
+
+    
     
 

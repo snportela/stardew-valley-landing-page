@@ -1,10 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../../assets/logo.png";
-import Hamburger from "../../assets/hamburger.png";
-import Close from "../../assets/close.png";
-import "./styles.sass";
+import Logo from "../../../public/assets/icons/logo.png";
+import Hamburger from "../../../public/assets/icons/hamburger.png";
+import Close from "../../../public/assets/icons/close.png";
 import { useEffect, useState } from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
+import "./styles.sass";
 
 const Header = () => {
   const [currentLocation, setCurrentLocation] = useState("");
@@ -93,6 +93,14 @@ const Header = () => {
                   to="/media"
                 >
                   Media
+                </Link>
+              </li>
+              <li onClick={() => changeSection()}>
+                <Link
+                  className={currentLocation === "/platforms" ? "active" : ""}
+                  to="/platforms"
+                >
+                  Platforms
                 </Link>
               </li>
               <li onClick={() => changeSection()}>

@@ -1,10 +1,10 @@
 import "./styles.sass";
-import Farm from "../../../../assets/farming.jpg";
-import Land from "../../../../assets/land.jpg";
-import Friends from "../../../../assets/friends.jpg";
-import Love from "../../../../assets/love.jpg";
-import Mining from "../../../../assets/mining.jpg";
-import Custom from "../../../../assets/custom.jpg";
+import Farm from "../../../../../public/assets/images/farming.jpg";
+import Land from "../../../../../public/assets/images/land.jpg";
+import Friends from "../../../../../public/assets/images/friends.jpg";
+import Love from "../../../../../public/assets/images/love.jpg";
+import Mining from "../../../../../public/assets/images/mining.jpg";
+import Custom from "../../../../../public/assets/images/custom.jpg";
 
 const About = () => {
   return (

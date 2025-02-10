@@ -1,5 +1,5 @@
 import "./styles.sass";
-import CALogo from "../../../../assets/ca_logo.gif";
+import CALogo from "../../../../../public/assets/images/ca_logo.gif";
 
 const Creator = () => {
   return (

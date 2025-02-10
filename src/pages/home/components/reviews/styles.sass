@@ -1,7 +1,8 @@
 @use "../../../../styles/variables" as *
 
 .reviews
-    background-image: linear-gradient($light-blue, $light-green)
+    font-size: 1.75rem 
+    background-color: $dark-blue
     color: $white
     padding: 5%
 
@@ -14,6 +15,7 @@
         display: grid
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
         gap: 5rem
+        text-shadow: rgba(0, 0, 0, 0.445) 1.95px 1.95px 2.6px
 
         &::after
             content: ""
@@ -28,14 +30,14 @@
             text-decoration: none
             color: inherit
             font-weight: bolder
-            font-size: 1.5rem
             display: flex
             align-items: center
             padding-bottom: 2%
             gap: 5px
+            font-size: 2rem
 
             &:hover
                 transform: scale(1.02)
 
         p
-            font-size: 1.25rem
+            font-size: 1.75rem

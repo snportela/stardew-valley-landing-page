@@ -1,8 +1,9 @@
 @use "../../../../styles/variables" as *
 
 .languages
-    padding-bottom: 5%
-    background-image: linear-gradient($dark-blue, $blue)
+    padding: 5% 0
+    font-size: 1.75rem    
+    background-color: $dark-blue
     color: $white
 
     h1
@@ -13,7 +14,6 @@
         width: 80%
         margin: auto
         list-style: none
-        font-size: 1.5rem
         display: grid
         grid-template-columns: repeat(auto-fit, minmax(30%, 1fr))
         column-gap: 3rem
@@ -22,6 +22,8 @@
             padding: 5% 3%
             display: flex
             align-items: center
+            font-size: 2rem 
+            text-shadow: rgba(0, 0, 0, 0.445) 1.95px 1.95px 2.6px
 
             img
                 margin-right: 2%

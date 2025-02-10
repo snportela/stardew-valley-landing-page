@@ -1,5 +1,16 @@
 @use "../../../../styles/variables.sass" as *
 
 .media
-    height: 100vh
-    background-image: linear-gradient($brown, $dark-brown)
+    padding: 10% 0
+    // background-image: linear-gradient($light-brown, $brown)
+    background-color: $light-brown
+
+    .container
+        width: 80%
+        margin: auto
+
+
+@media screen and ( max-width: 500px )
+    .media
+        .container
+            width: 90%
