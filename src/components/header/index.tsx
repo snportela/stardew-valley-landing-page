@@ -5,6 +5,7 @@ import Close from "../../../public/assets/icons/close.png";
 import { useEffect, useState } from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import "./styles.sass";
+import MenuItem, { MenuItemInterface } from "./menu-item";
 
 const Header = () => {
   const [currentLocation, setCurrentLocation] = useState("");
@@ -61,6 +62,45 @@ const Header = () => {
     });
   };
 
+  const menuItems: MenuItemInterface[] = [
+    {
+      route: "/",
+      name: "Home",
+    },
+    {
+      route: "/about",
+      name: "About",
+    },
+    {
+      route: "/media",
+      name: "Media",
+    },
+    {
+      route: "/platforms",
+      name: "Platforms",
+    },
+    {
+      route: "/requirements",
+      name: "Requirements",
+    },
+    {
+      route: "/languages",
+      name: "Languages",
+    },
+    {
+      route: "/creator",
+      name: "Creator",
+    },
+    {
+      route: "/reviews",
+      name: "Reviews",
+    },
+    {
+      route: "/contact",
+      name: "Contact",
+    },
+  ];
+
   return (
     <header className="header">
       {isMediumScreen ? (
@@ -71,90 +111,31 @@ const Header = () => {
           </div>
           <nav className="menu">
             <ul>
-              <li onClick={() => changeSection()}>
-                <Link
-                  className={currentLocation === "/" ? "active" : ""}
-                  to="/"
-                >
-                  Home
-                </Link>
-              </li>
-              <li onClick={() => changeSection()}>
-                <Link
-                  className={currentLocation === "/about" ? "active" : ""}
-                  to="/about"
-                >
-                  About
-                </Link>
-              </li>
-              <li onClick={() => changeSection()}>
-                <Link
-                  className={currentLocation === "/media" ? "active" : ""}
-                  to="/media"
-                >
-                  Media
-                </Link>
-              </li>
-              <li onClick={() => changeSection()}>
-                <Link
-                  className={currentLocation === "/platforms" ? "active" : ""}
-                  to="/platforms"
-                >
-                  Platforms
-                </Link>
-              </li>
-              <li onClick={() => changeSection()}>
-                <Link
-                  className={
-                    currentLocation === "/requirements" ? "active" : ""
-                  }
-                  to="/requirements"
-                >
-                  Requirements
-                </Link>
-              </li>
-              <li onClick={() => changeSection()}>
-                <Link
-                  className={currentLocation === "/languages" ? "active" : ""}
-                  to="/languages"
-                >
-                  Languages
-                </Link>
-              </li>
-              <li onClick={() => changeSection()}>
-                <Link
-                  className={currentLocation === "/creator" ? "active" : ""}
-                  to="/creator"
-                >
-                  Creator
-                </Link>
-              </li>
-              <li onClick={() => changeSection()}>
-                <Link
-                  className={currentLocation === "/reviews" ? "active" : ""}
-                  to="/reviews"
-                >
-                  Reviews
-                </Link>
-              </li>
-              <li onClick={() => changeSection()}>
-                <Link
-                  className={currentLocation === "/contact" ? "active" : ""}
-                  to="/contact"
-                >
-                  Contact
-                </Link>
-              </li>
+              {menuItems.map((item) => {
+                return (
+                  <MenuItem
+                    item={item}
+                    changeSection={changeSection}
+                    currentLocation={currentLocation}
+                  />
+                );
+              })}
             </ul>
           </nav>
         </div>
       ) : (
-        <button
-          className="hamburguerBtn"
-          onClick={() => setIsMenuToggled(!isMenuToggled)}
-        >
-          <img src={Hamburger} alt="" />
-        </button>
+        <div className="nav-btn">
+          <button
+            className="hamburguerBtn"
+            onClick={() => setIsMenuToggled(!isMenuToggled)}
+          >
+            <img src={Hamburger} alt="" />
+          </button>
+          <div onClick={() => changeSection()} className="logo">
+            <img src={Logo} alt="logo" />
+            <Link to="/">Pelican Town</Link>
+          </div>
+        </div>
       )}
 
       {!isMediumScreen && isMenuToggled && (
@@ -168,108 +149,25 @@ const Header = () => {
           >
             <img src={Close} alt="" />
           </button>
+
           <ul>
-            <li
-              onClick={() => {
-                changeSection();
-                setIsMenuToggled(!isMenuToggled);
-              }}
-            >
-              <Link className={currentLocation === "/" ? "active" : ""} to="/">
-                Home
-              </Link>
-            </li>
-            <li
-              onClick={() => {
-                changeSection();
-                setIsMenuToggled(!isMenuToggled);
-              }}
-            >
-              <Link
-                className={currentLocation === "/about" ? "active" : ""}
-                to="/about"
-              >
-                About
-              </Link>
-            </li>
-            <li
-              onClick={() => {
-                changeSection();
-                setIsMenuToggled(!isMenuToggled);
-              }}
-            >
-              <Link
-                className={currentLocation === "/media" ? "active" : ""}
-                to="/media"
-              >
-                Media
-              </Link>
-            </li>
-            <li
-              onClick={() => {
-                changeSection();
-                setIsMenuToggled(!isMenuToggled);
-              }}
-            >
-              <Link
-                className={currentLocation === "/requirements" ? "active" : ""}
-                to="/requirements"
-              >
-                Requirements
-              </Link>
-            </li>
-            <li
-              onClick={() => {
-                changeSection();
-                setIsMenuToggled(!isMenuToggled);
-              }}
-            >
-              <Link
-                className={currentLocation === "/languages" ? "active" : ""}
-                to="/languages"
-              >
-                Languages
-              </Link>
-            </li>
-            <li
-              onClick={() => {
-                changeSection();
-                setIsMenuToggled(!isMenuToggled);
-              }}
-            >
-              <Link
-                className={currentLocation === "/creator" ? "active" : ""}
-                to="/creator"
-              >
-                Creator
-              </Link>
-            </li>
-            <li
-              onClick={() => {
-                changeSection();
-                setIsMenuToggled(!isMenuToggled);
-              }}
-            >
-              <Link
-                className={currentLocation === "/reviews" ? "active" : ""}
-                to="/reviews"
-              >
-                Reviews
-              </Link>
-            </li>
-            <li
-              onClick={() => {
-                changeSection();
-                setIsMenuToggled(!isMenuToggled);
-              }}
-            >
-              <Link
-                className={currentLocation === "/contact" ? "active" : ""}
-                to="/contact"
-              >
-                Contact
-              </Link>
-            </li>
+            {menuItems.map((item) => {
+              return (
+                <li
+                  onClick={() => {
+                    changeSection();
+                    setIsMenuToggled(!isMenuToggled);
+                  }}
+                >
+                  <Link
+                    className={currentLocation === item.route ? "active" : ""}
+                    to={item.route}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       )}

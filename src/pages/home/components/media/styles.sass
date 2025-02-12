@@ -2,15 +2,51 @@
 
 .media
     padding: 10% 0
-    // background-image: linear-gradient($light-brown, $brown)
     background-color: $light-brown
+    font-size: 1.75rem
+
+    h1
+        color: $dark-blue
+        text-align: center
+        padding-bottom: 5%
 
     .container
         width: 80%
         margin: auto
 
+    .nextBtn, .previousBtn
+        position: absolute      
+        z-index: 100
+        top: 50%
+        width: 64px
+        height: 64px
+        cursor: pointer
 
-@media screen and ( max-width: 500px )
+    .nextBtn
+        background: url("../../../../../public/assets/icons/right-arrow4.png")
+        right: 2%
+
+    .previousBtn
+        background: url("../../../../../public/assets/icons/left-arrow1.png")
+        left: 2%
+
+@media screen and ( max-width: 800px )
     .media
         .container
             width: 90%
+            margin: auto
+
+        .nextBtn, .previousBtn
+            top: 50%
+            width: 32px
+            height: 32px
+            background-size: cover
+
+
+
+
+        
+
+
+
+

@@ -17,6 +17,7 @@
         display: grid
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
         column-gap: 1.5rem
+        row-gap: 1.5rem
         font-size: 1.5rem
         text-shadow: rgba(0, 0, 0, 0.445) 1.95px 1.95px 2.6px
 
@@ -34,3 +35,14 @@
 
             li
                 margin-top: 5%
+
+@media screen and ( max-width: 500px )
+    .requirements
+        font-size: 1.75rem
+
+        .container
+            font-size: 1.5rem
+
+        img
+            width: 64px
+            height: 64px
