@@ -1,7 +1,7 @@
 import "./styles.sass";
-import WindowsLogo from "../../../../../public/assets/images/windows.png";
-import MacLogo from "../../../../../public/assets/images/mac-os-logo.png";
-import LinuxLogo from "../../../../../public/assets/images/linux-platform.png";
+import WindowsLogo from "/assets/images/windows.png";
+import MacLogo from "/assets/images/mac-os-logo.png";
+import LinuxLogo from "/assets/images/linux-platform.png";
 
 const Requirements = () => {
   return (
@@ -14,7 +14,7 @@ const Requirements = () => {
             <li>OS *: Windows Vista or greater</li>
             <li>Processor: 2 Ghz</li>
             <li>Memory: 2 GB RAM</li>
-            <li>Graphics: 256 mb video memory, shader model 3.0 </li>
+            <li>Graphics: 256 mb video memory, shader model 3.0</li>
             <li>DirectX: Version 10</li>
             <li>Storage: 500 MB available space</li>
           </ul>

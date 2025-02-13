@@ -1,5 +1,5 @@
 import "./styles.sass";
-import LinkIcon from "../../../../../public/assets/icons/link.png";
+import LinkIcon from "/assets/icons/link.png";
 
 const Reviews = () => {
   return (

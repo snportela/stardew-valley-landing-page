@@ -1,10 +1,10 @@
 import "./styles.sass";
-import Steam from "../../../../../public/assets/images/STEAM_logo.png";
-import PS4 from "../../../../../public/assets/images/PS4_logo.png";
-import Xbox from "../../../../../public/assets/images/XBOXOne_logo.png";
-import Switch from "../../../../../public/assets/images/NintendoSwitch_logo.png";
-import IOS from "../../../../../public/assets/images/iOS_logo.png";
-import Android from "../../../../../public/assets/images/android_logo.png";
+import Steam from "/assets/images/STEAM_logo.png";
+import PS4 from "/assets/images/PS4_logo.png";
+import Xbox from "/assets/images/XBOXOne_logo.png";
+import Switch from "/assets/images/NintendoSwitch_logo.png";
+import IOS from "/assets/images/iOS_logo.png";
+import Android from "/assets/images/android_logo.png";
 
 const Platforms = () => {
   return (

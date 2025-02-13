@@ -1,16 +1,16 @@
 import "./styles.sass";
-import English from "../../../../../public/assets/icons/united-kingdom.png";
-import Japan from "../../../../../public/assets/icons/japan.png";
-import Germany from "../../../../../public/assets/icons/germany.png";
-import Spain from "../../../../../public/assets/icons/spain.png";
-import Brazil from "../../../../../public/assets/icons/brazil.png";
-import Russia from "../../../../../public/assets/icons/russia.png";
-import China from "../../../../../public/assets/icons/china.png";
-import France from "../../../../../public/assets/icons/france.png";
-import Italy from "../../../../../public/assets/icons/italy.png";
-import Hungary from "../../../../../public/assets/icons/hungary.png";
-import SouthKorea from "../../../../../public/assets/icons/south-korea.png";
-import Turkey from "../../../../../public/assets/icons/turkey.png";
+import English from "/assets/icons/united-kingdom.png";
+import Japan from "/assets/icons/japan.png";
+import Germany from "/assets/icons/germany.png";
+import Spain from "/assets/icons/spain.png";
+import Brazil from "/assets/icons/brazil.png";
+import Russia from "/assets/icons/russia.png";
+import China from "/assets/icons/china.png";
+import France from "/assets/icons/france.png";
+import Italy from "/assets/icons/italy.png";
+import Hungary from "/assets/icons/hungary.png";
+import SouthKorea from "/assets/icons/south-korea.png";
+import Turkey from "/assets/icons/turkey.png";
 
 const Languages = () => {
   return (

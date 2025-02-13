@@ -1,9 +1,9 @@
 import "./styles.sass";
-import HeroLogo from "../../../../../public/assets/images/main_logo.png";
-import Parallax from "../../../../../public/assets/images/parallax4.png";
-import Divider from "../../../../../public/assets/images/sdv_divider.png";
-import Cloud from "../../../../../public/assets/images/cloud.png";
-import Bird from "../../../../../public/assets/images/stardew_bird.gif";
+import HeroLogo from "/assets/images/main_logo.png";
+import Parallax from "/assets/images/parallax4.png";
+import Divider from "/assets/images/sdv_divider.png";
+import Cloud from "/assets/images/cloud.png";
+import Bird from "/assets/images/stardew_bird.gif";
 import { useEffect, useState } from "react";
 
 const Hero = () => {

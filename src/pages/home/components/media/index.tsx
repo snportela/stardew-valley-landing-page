@@ -1,25 +1,46 @@
-import AwesomeSlider from "react-magical-carousel";
+import ReactMagicalCarousel from "react-magical-carousel";
 import "./styles.sass";
 
 const Media = () => {
-  const images = [
-    "/assets/images/StardewValley_5.png",
-    "/assets/images/StardewValley_12-1.png",
-    "/assets/images/NightMarket-1-1.png",
-    "/assets/images/1_1screenshot15.png",
-    "/assets/images/StardewValley_11.png",
-    "/assets/images/StardewValley_4.png",
+  const media = [
+    {
+      type: "video",
+      link: "/assets/videos/movie_max.mp4",
+    },
+    {
+      type: "image",
+      link: "/assets/images/StardewValley_5.png",
+    },
+    {
+      type: "image",
+      link: "/assets/images/StardewValley_12-1.png",
+    },
+    {
+      type: "image",
+      link: "/assets/images/NightMarket-1-1.png",
+    },
+    {
+      type: "image",
+      link: "/assets/images/1_1screenshot15.png",
+    },
+    {
+      type: "image",
+      link: "/assets/images/StardewValley_11.png",
+    },
+    {
+      type: "image",
+      link: "/assets/images/StardewValley_4.png",
+    },
   ];
 
   return (
     <div id="media" className="media section">
       <h1>Media</h1>
       <div className="container">
-        <AwesomeSlider
+        <ReactMagicalCarousel
           slideWidth={"100%"}
           ratio={9 / 16}
-          jumpInterval={4000}
-          // transition={1000}
+          transition={800}
           slideMargin={0}
           renderJumpBtns={true}
           renderDotBtns={true}
@@ -28,10 +49,18 @@ const Media = () => {
             <div onClick={onJump} className="previousBtn"></div>
           )}
         >
-          {images.map((image) => (
-            <img src={image} alt="" />
-          ))}
-        </AwesomeSlider>
+          {media.map((media, index) => {
+            if (media.type === "image") {
+              return <img key={index} src={media.link} alt="" />;
+            } else {
+              return (
+                <video width="100%" height="100%" controls autoPlay muted>
+                  <source src={media.link} type="video/mp4" />
+                </video>
+              );
+            }
+          })}
+        </ReactMagicalCarousel>
       </div>
     </div>
   );

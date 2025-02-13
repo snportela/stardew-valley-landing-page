@@ -1,7 +1,7 @@
 @use "../../../../styles/variables" as *
 
 .hero
-    background-image: url("../../../../../public/assets/images/stardewbackground.png")
+    background-image: url("/assets/images/stardewbackground.png")
     position: relative
     height: 178vh
     display: flex
@@ -68,7 +68,26 @@
         100% 
             transform: translateX(0px)
 
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5)
+    .hero
+        height: 127vh
 
+        .hero-logo
+            top: 100px
+            width: 70%
+            height: 30%
+
+        .ground, .mountains
+            height: 60%
+            width: 100%
+            object-position: 52% 0%
+
+        .mountains
+            position: absolute
+            top: 355px
+        
+        .cloud, .bird
+            display: none
 
 
 @media screen and ( max-width: 500px )
@@ -95,10 +114,15 @@
     .hero
         height: 110vh
 
+        .hero-logo
+            top: 100px
+            width: 80%
+            height: 30%
+
         .ground, .mountains
             height: 50%
             width: 100%
-            // object-position: 52% 0%
+           
 
         .mountains
             position: absolute
@@ -106,6 +130,7 @@
 
         .cloud, .bird
             display: none
+
 
 
 @media  (min-width: 800px) and (max-width: 1300px) and (max-height: 1400px)
@@ -125,28 +150,62 @@
             display: none
 
 
-// @media  (min-width: 540px) and (max-height: 1000)
-    // .hero
-    //     height: 119vh
 
-    //     .hero-logo
-    //         top: 100px
-    //         width: 30%
-    //         height: 20%
+@media only screen and (orientation: landscape) and (max-width: 1200px)
+    .hero
+        height: 127vh
 
-    //     .ground, .mountains
-    //         height: 60%
-    //         width: 100%
-    //         object-position: 52% 0%
+        .hero-logo
+            top: 70px
+            width: 60%
+            height: 35%
 
-    //     .mountains
-    //         position: absolute
-    //         top: 500px
+        .ground, .mountains
+            height: 60%
+            width: 100%
+            object-position: 52% 0%
 
-    //     .cloud, .bird
-    //         display: none
+        .mountains
+            position: absolute
+            top: 275px
 
-// @media all and (orientation: landscape) 
+@media only screen and (orientation: landscape) and (max-width: 900px)
+        .hero
+            height: 127vh
+
+            .hero-logo
+                top: 70px
+                width: 60%
+                height: 35%
+
+            .ground, .mountains
+                height: 60%
+                width: 100%
+                object-position: 52% 0%
+
+            .mountains
+                position: absolute
+                top: 120px
+        
+
+@media  (min-width: 1559px) and (max-height: 975px) 
+        .hero
+            height: 127vh
+
+            .hero-logo
+                top: 70px
+                width: 60%
+                height: 35%
+
+            .ground, .mountains
+                height: 60%
+                width: 100%
+                object-position: 52% 0%
+
+            .mountains
+                position: absolute
+                top: 350px
+
 
  
  

@@ -1,5 +1,5 @@
 import "./styles.sass";
-import Logo from "../../../public/assets/icons/logo.png";
+import Logo from "/assets/icons/logo.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 

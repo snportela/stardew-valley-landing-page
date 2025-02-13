@@ -1,7 +1,6 @@
 @use "../../../../styles/variables.sass" as *
 
 .media
-    padding: 10% 0
     background-color: $light-brown
     font-size: 1.75rem
 
@@ -11,7 +10,7 @@
         padding-bottom: 5%
 
     .container
-        width: 80%
+        width: 70%
         margin: auto
 
     .nextBtn, .previousBtn
@@ -20,15 +19,17 @@
         top: 50%
         width: 64px
         height: 64px
-        cursor: pointer
+        cursor: url("/assets/icons/stardew_pointer.png"), auto
 
     .nextBtn
-        background: url("../../../../../public/assets/icons/right-arrow4.png")
+        background: url("/assets/icons/right-arrow4.png")
         right: 2%
 
     .previousBtn
-        background: url("../../../../../public/assets/icons/left-arrow1.png")
+        background: url("/assets/icons/left-arrow1.png")
         left: 2%
+
+ 
 
 @media screen and ( max-width: 800px )
     .media

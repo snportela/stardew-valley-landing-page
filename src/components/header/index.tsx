@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../../../public/assets/icons/logo.png";
-import Hamburger from "../../../public/assets/icons/hamburger.png";
-import Close from "../../../public/assets/icons/close.png";
+import Logo from "/assets/icons/logo.png";
+import Hamburger from "/assets/icons/hamburger.png";
+import Close from "/assets/icons/close.png";
 import { useEffect, useState } from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
 import "./styles.sass";
@@ -111,9 +111,10 @@ const Header = () => {
           </div>
           <nav className="menu">
             <ul>
-              {menuItems.map((item) => {
+              {menuItems.map((item, index) => {
                 return (
                   <MenuItem
+                    key={index}
                     item={item}
                     changeSection={changeSection}
                     currentLocation={currentLocation}
@@ -151,9 +152,10 @@ const Header = () => {
           </button>
 
           <ul>
-            {menuItems.map((item) => {
+            {menuItems.map((item, index) => {
               return (
                 <li
+                  key={index}
                   onClick={() => {
                     changeSection();
                     setIsMenuToggled(!isMenuToggled);
