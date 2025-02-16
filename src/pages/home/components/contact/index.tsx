@@ -1,38 +1,52 @@
 import "./styles.sass";
-import Phone from "/assets/icons/phone-call.png";
-import Location from "/assets/icons/location.png";
-import Mail from "/assets/icons/mail.png";
+import { useContext } from "react";
+import { WebsiteContent } from "../../../../contexts";
 
 const Contact = () => {
+  const {
+    pages: {
+      home: { contact },
+    },
+  } = useContext(WebsiteContent);
   return (
     <div id="contact" className="contact section">
-      <h1>Contact Us</h1>
+      <h1>{contact.title}</h1>
       <div className="container">
         <div className="contact-left">
-          <h2>Ask us anything</h2>
-          <p>
-            <img src={Phone} alt="Phone icon" />
-            (555) 26021 - 20161
-          </p>
-          <p>
-            <img src={Location} alt="Location icon" />
-            Ferngill Republic
-          </p>
-          <p>
-            <img src={Mail} alt="Mail icon" />
-            pelicantown@email.com
-          </p>
+          <h2>{contact.subtitle}</h2>
+          {contact.contactInfo.map((item, index) => {
+            return (
+              <p key={index}>
+                <img src={item.icon} alt={`${item.type} + icon`} />
+                {item.description}
+              </p>
+            );
+          })}
         </div>
         <div className="contact-right">
           <form>
-            <input type="text" id="name" name="name" placeholder="NAME" />
-            <input type="text" id="email" name="email" placeholder="EMAIL" />
-            <textarea
-              name="message"
-              id="message"
-              placeholder="MESSAGE"
-            ></textarea>
-            <button>Send Message</button>
+            {contact.form.map((item, index) => {
+              return (
+                <div key={index}>
+                  {item.type === "input" && (
+                    <input
+                      type="text"
+                      id={item.name}
+                      name={item.name}
+                      placeholder={item.placeholder}
+                    />
+                  )}
+                  {item.type === "textarea" && (
+                    <textarea
+                      name={item.name}
+                      id={item.name}
+                      placeholder={item.placeholder}
+                    />
+                  )}
+                </div>
+              );
+            })}
+            <button>{contact.buttonText}</button>
           </form>
         </div>
       </div>

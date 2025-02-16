@@ -1,20 +1,21 @@
 import "./styles.sass";
 import CALogo from "/assets/images/ca_logo.gif";
+import { useContext } from "react";
+import { WebsiteContent } from "../../../../contexts";
 
 const Creator = () => {
+  const {
+    pages: {
+      home: { creator },
+    },
+  } = useContext(WebsiteContent);
   return (
     <div id="creator" className="creator section">
-      <h1>Creator</h1>
+      <h1>{creator.title}</h1>
       <div className="container">
         <img src={CALogo} alt="ConcernedApe" />
 
-        <p>
-          ConcernedApe is Eric Barone, the creator and lead developer of Stardew
-          Valley, as well as the name of the company he founded to continue game
-          development. From 2012 to 2019, he was the sole developer of the game
-          (except the multiplayer networking code in 1.3) and created all art,
-          sound effects, and music. He currently resides in Seattle, Washington.
-        </p>
+        <p>{creator.text}</p>
       </div>
     </div>
   );

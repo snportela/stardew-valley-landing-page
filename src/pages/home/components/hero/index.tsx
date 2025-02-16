@@ -1,10 +1,10 @@
-import "./styles.sass";
+import { useEffect, useState } from "react";
 import HeroLogo from "/assets/images/main_logo.png";
 import Parallax from "/assets/images/parallax4.png";
 import Divider from "/assets/images/sdv_divider.png";
 import Cloud from "/assets/images/cloud.png";
 import Bird from "/assets/images/stardew_bird.gif";
-import { useEffect, useState } from "react";
+import "./styles.sass";
 
 const Hero = () => {
   const [offsetY, setOffsetY] = useState(0);

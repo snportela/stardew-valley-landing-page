@@ -1,17 +1,19 @@
 import { Link, useLocation } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import "./styles.sass";
 import Logo from "/assets/icons/logo.png";
 import Hamburger from "/assets/icons/hamburger.png";
 import Close from "/assets/icons/close.png";
-import { useEffect, useState } from "react";
 import useMediaQuery from "../../hooks/useMediaQuery";
-import "./styles.sass";
-import MenuItem, { MenuItemInterface } from "./menu-item";
+import MenuItem from "./menu-item";
+import { WebsiteContent } from "../../contexts";
 
 const Header = () => {
   const [currentLocation, setCurrentLocation] = useState("");
   const location = useLocation();
   const isMediumScreen = useMediaQuery("(min-width: 1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState(false);
+  const { menu } = useContext(WebsiteContent);
 
   useEffect(() => {
     let sections = document.querySelectorAll(".section") as any;
@@ -62,45 +64,6 @@ const Header = () => {
     });
   };
 
-  const menuItems: MenuItemInterface[] = [
-    {
-      route: "/",
-      name: "Home",
-    },
-    {
-      route: "/about",
-      name: "About",
-    },
-    {
-      route: "/media",
-      name: "Media",
-    },
-    {
-      route: "/platforms",
-      name: "Platforms",
-    },
-    {
-      route: "/requirements",
-      name: "Requirements",
-    },
-    {
-      route: "/languages",
-      name: "Languages",
-    },
-    {
-      route: "/creator",
-      name: "Creator",
-    },
-    {
-      route: "/reviews",
-      name: "Reviews",
-    },
-    {
-      route: "/contact",
-      name: "Contact",
-    },
-  ];
-
   return (
     <header className="header">
       {isMediumScreen ? (
@@ -111,7 +74,7 @@ const Header = () => {
           </div>
           <nav className="menu">
             <ul>
-              {menuItems.map((item, index) => {
+              {menu.map((item, index) => {
                 return (
                   <MenuItem
                     key={index}
@@ -140,38 +103,44 @@ const Header = () => {
       )}
 
       {!isMediumScreen && isMenuToggled && (
-        <nav className="navbar-mobile">
-          <button
-            className="hamburguerBtn"
-            onClick={() => {
-              changeSection();
-              setIsMenuToggled(!isMenuToggled);
-            }}
-          >
-            <img src={Close} alt="" />
-          </button>
+        <>
+          <div
+            className="navbar-backdrop"
+            onClick={() => setIsMenuToggled(false)}
+          ></div>
+          <nav className="navbar-mobile">
+            <button
+              className="hamburguerBtn"
+              onClick={() => {
+                changeSection();
+                setIsMenuToggled(!isMenuToggled);
+              }}
+            >
+              <img src={Close} alt="" />
+            </button>
 
-          <ul>
-            {menuItems.map((item, index) => {
-              return (
-                <li
-                  key={index}
-                  onClick={() => {
-                    changeSection();
-                    setIsMenuToggled(!isMenuToggled);
-                  }}
-                >
-                  <Link
-                    className={currentLocation === item.route ? "active" : ""}
-                    to={item.route}
+            <ul>
+              {menu.map((item, index) => {
+                return (
+                  <li
+                    key={index}
+                    onClick={() => {
+                      changeSection();
+                      setIsMenuToggled(!isMenuToggled);
+                    }}
                   >
-                    {item.name}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
+                    <Link
+                      className={currentLocation === item.route ? "active" : ""}
+                      to={item.route}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+        </>
       )}
     </header>
   );

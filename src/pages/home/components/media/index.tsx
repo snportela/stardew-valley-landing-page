@@ -1,37 +1,14 @@
-import ReactMagicalCarousel from "react-magical-carousel";
+import ReactMagicalCarousel from "./awesome-slider/AwesomeSlider";
+import { useContext } from "react";
+import { WebsiteContent } from "../../../../contexts";
 import "./styles.sass";
 
 const Media = () => {
-  const media = [
-    {
-      type: "video",
-      link: "/assets/videos/movie_max.mp4",
+  const {
+    pages: {
+      home: { media },
     },
-    {
-      type: "image",
-      link: "/assets/images/StardewValley_5.png",
-    },
-    {
-      type: "image",
-      link: "/assets/images/StardewValley_12-1.png",
-    },
-    {
-      type: "image",
-      link: "/assets/images/NightMarket-1-1.png",
-    },
-    {
-      type: "image",
-      link: "/assets/images/1_1screenshot15.png",
-    },
-    {
-      type: "image",
-      link: "/assets/images/StardewValley_11.png",
-    },
-    {
-      type: "image",
-      link: "/assets/images/StardewValley_4.png",
-    },
-  ];
+  } = useContext(WebsiteContent);
 
   return (
     <div id="media" className="media section">
@@ -41,7 +18,7 @@ const Media = () => {
           slideWidth={"100%"}
           ratio={9 / 16}
           transition={800}
-          slideMargin={0}
+          slideMargin={"0"}
           renderJumpBtns={true}
           renderDotBtns={true}
           nextBtn={(onJump) => <div onClick={onJump} className="nextBtn"></div>}
@@ -49,13 +26,20 @@ const Media = () => {
             <div onClick={onJump} className="previousBtn"></div>
           )}
         >
-          {media.map((media, index) => {
+          {media.sliderMedia.map((media, index) => {
             if (media.type === "image") {
               return <img key={index} src={media.link} alt="" />;
             } else {
               return (
-                <video width="100%" height="100%" controls autoPlay muted>
-                  <source src={media.link} type="video/mp4" />
+                <video
+                  key={index}
+                  width="100%"
+                  height="100%"
+                  controls
+                  autoPlay
+                  muted
+                >
+                  <source key={index} src={media.link} type="video/mp4" />
                 </video>
               );
             }
