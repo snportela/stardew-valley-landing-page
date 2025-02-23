@@ -28,7 +28,7 @@
 <h2 id="about">📌 About</h2>
 
 <p>
-  My first project built with React, a landing page for the 'Stardew Valley' game, containing information about the game, such as the available platforms, system requirements, languages, creator, and a contact section. The slider in the media section was developed by <a href=https://github.com/MatheusFullstackOverkill>Matheus Gonçalves</a>.
+  My first project built with React, a landing page for the 'Stardew Valley' game, containing information about the game, such as the available platforms, system requirements, languages, creator, and a contact section. 
 </p>
 
 <img src=".github/screenshot1.png" alt="Home Page" width="500px"></td>

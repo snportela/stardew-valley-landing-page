@@ -1,7 +1,8 @@
-import ReactMagicalCarousel from "./awesome-slider/AwesomeSlider";
+// import ReactMagicalCarousel from "./awesome-slider/AwesomeSlider";
 import { useContext } from "react";
 import { WebsiteContent } from "../../../../contexts";
 import "./styles.sass";
+import ReactMagicalCarousel from "react-magical-carousel";
 
 const Media = () => {
   const {
