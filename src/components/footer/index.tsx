@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Footer = () => {
-  const [currentLocation, setCurrentLocation] = useState("");
+  const [, setCurrentLocation] = useState("");
 
   const changeSection = () => {
     setTimeout(() => {

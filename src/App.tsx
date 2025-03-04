@@ -7,7 +7,7 @@ import { WebsiteContent } from "./contexts";
 import { websiteContentJSON } from "./data";
 
 const App = () => {
-  const [content, setContent] = useState<any>(websiteContentJSON);
+  const [content] = useState<any>(websiteContentJSON);
 
   return (
     <WebsiteContent.Provider value={content}>
