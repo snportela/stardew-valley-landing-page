@@ -3,6 +3,7 @@
 [SASS_BADGE]: https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white
 [NPM_BADGE]: https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white
 [VITE_BADGE]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
+[WEBSITE_LINK]: https://pelican-town.pages.dev/
 
 <h1 align="center" style="font-weight: bold;">Stardew Valley Landing Page 🐔</h1>
 
@@ -30,6 +31,8 @@
 <p>
   My first project built with React, a landing page for the 'Stardew Valley' game, containing information about the game, such as the available platforms, system requirements, languages, creator, and a contact section. 
 </p>
+
+Visit the [Pelican Town](https://pelican-town.pages.dev/) website.
 
 <img src=".github/screenshot1.png" alt="Home Page" width="500px"></td>
 <img src=".github/screenshot2.png" alt="Home Page" width="500px"></td>
