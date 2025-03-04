@@ -76,7 +76,7 @@ export const websiteContentJSON = {
         sliderMedia: [
           {
             type: "video",
-            link: "/assets/videos/movie_max.mp4",
+            link: "https://drive.google.com/file/d/1DSYW_1Vp2ZtZx9q6QpbMLXhsNyJwZnT9/preview?mute=1",
           },
           {
             type: "image",

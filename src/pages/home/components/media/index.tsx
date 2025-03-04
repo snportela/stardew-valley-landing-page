@@ -32,16 +32,12 @@ const Media = () => {
               return <img key={index} src={media.link} alt="" />;
             } else {
               return (
-                <video
-                  key={index}
+                <iframe
+                  src={media.link}
+                  allow="autoplay"
                   width="100%"
                   height="100%"
-                  controls
-                  autoPlay
-                  muted
-                >
-                  <source key={index} src={media.link} type="video/mp4" />
-                </video>
+                ></iframe>
               );
             }
           })}
