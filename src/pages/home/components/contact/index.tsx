@@ -16,10 +16,10 @@ const Contact = () => {
           <h2>{contact.subtitle}</h2>
           {contact.contactInfo.map((item, index) => {
             return (
-              <p key={index}>
+              <span key={index}>
                 <img src={item.icon} alt={`${item.type} + icon`} />
                 {item.description}
-              </p>
+              </span>
             );
           })}
         </div>

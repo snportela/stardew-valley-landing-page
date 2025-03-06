@@ -3,7 +3,7 @@
 .hero
     background-image: url("/assets/images/stardewbackground.png")
     position: relative
-    height: 178vh
+    height: 1200px
     display: flex
     justify-content: center
     align-items: center
@@ -24,10 +24,11 @@
     .hero-logo
         position: absolute
         top: 150px
+        width: 650px
+        height: 325px
 
     .mountains, .ground
         object-fit: cover
-
 
     .mountains
         position: absolute
@@ -96,8 +97,8 @@
 
         .hero-logo
             top: 100px
-            width: 90%
-            height: 20%
+            width: 350px
+            height: 215px
 
         .ground, .mountains
             height: 70%
@@ -116,8 +117,8 @@
 
         .hero-logo
             top: 100px
-            width: 80%
-            height: 30%
+            width: 700px
+            height: 400px
 
         .ground, .mountains
             height: 50%
@@ -131,6 +132,13 @@
         .cloud, .bird
             display: none
 
+@media  (width: 540px) and (height: 720px)
+    .hero
+        height: 1000px
+
+        .hero-logo
+            width: 520px
+            height: 300px
 
 
 @media  (min-width: 800px) and (max-width: 1300px) and (max-height: 1400px)

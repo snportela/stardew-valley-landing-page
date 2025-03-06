@@ -3,21 +3,20 @@
 .requirements
     background-color: $light-brown
     color: $white
-    padding-bottom: 10%
+    padding: 30px
     font-size: 1.75rem
 
     h1
         text-align: center
-        padding-top: 5% 
         color: $dark-blue
 
     .container
         width: 85%
-        margin: 5rem auto
+        margin: 30px auto
         display: grid
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
-        column-gap: 1.5rem
-        row-gap: 1.5rem
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+        column-gap: 20px
+        row-gap: 20px
         font-size: 1.5rem
         text-shadow: rgba(0, 0, 0, 0.445) 1.95px 1.95px 2.6px
 
@@ -34,11 +33,16 @@
             margin: 10% 0
 
             li
-                margin-top: 5%
+                margin-top: 15px
+
+@media screen and ( max-width: 1000px )
+        .requirements
+            padding: 5px
 
 @media screen and ( max-width: 500px )
     .requirements
         font-size: 1.75rem
+        padding: 10px
 
         .container
             font-size: 1.5rem

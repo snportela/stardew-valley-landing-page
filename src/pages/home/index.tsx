@@ -11,7 +11,7 @@ import "./styles.sass";
 
 const Home = () => {
   return (
-    <div id="home" className="home">
+    <div id="home" className="home content">
       <Hero />
       <About />
       <Media />

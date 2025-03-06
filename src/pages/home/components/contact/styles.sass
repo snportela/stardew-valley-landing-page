@@ -4,35 +4,42 @@
     font-size: 1.75rem
     background-color: $dark-blue
     color: $white
+    padding: 30px
 
     h1
         text-align: center
         padding: 5% 0
     
     .container
-        width: 80%
         margin: auto
-        display: grid
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
-        gap: 5rem
+        display: flex
+        align-items: center
+        justify-content: space-around
+        flex-wrap: wrap
+        gap: 30px
 
         .contact-left
             text-shadow: rgba(0, 0, 0, 0.445) 1.95px 1.95px 2.6px
 
             h2
                 text-align: center
+                margin-bottom: 20px 
 
-            p
+            span
                 display: flex
                 align-items: center
+                justify-content: center
                 padding: 4% 0
+                width: 300px
 
                 img
                     padding: 0 3%
 
         .contact-right
             background-color: $off-white
-            padding: 5%
+            padding: 30px
+            width: 500px
+
             form
                 width: 100%
 
@@ -72,3 +79,7 @@
 @media screen and ( max-width: 500px )
     .contact
         font-size: 1.5rem
+
+        .container
+            .contact-right
+                padding: 10px

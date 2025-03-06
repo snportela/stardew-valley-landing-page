@@ -1,40 +1,43 @@
 @use "../../../../styles/variables" as *
 
 .languages
-    padding: 5% 0
+    padding: 30px
     font-size: 1.75rem    
     background-color: $dark-blue
     color: $white
 
     h1
         text-align: center
-        margin-bottom: 5%
+        margin-bottom: 20px
 
     ul
-        width: 80%
-        margin: auto
         list-style: none
-        display: grid
-        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr))
-        column-gap: 3rem
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        gap: 50px
 
         li
-            padding: 5% 3%
+            padding: 5px
             display: flex
+            width: 250px
             align-items: center
             font-size: 2rem 
             text-shadow: rgba(0, 0, 0, 0.445) 1.95px 1.95px 2.6px
 
             img
-                margin-right: 2%
+                margin-right: 10px
 
 @media screen and ( max-width: 500px )
     .languages
+        padding: 10px
 
         ul
+            gap: 25px 50px
+
             li
-                font-size: 1.5rem
-                gap: 10px
+                font-size: 1.75rem
+                width: 320px
                 
             img
                 width: 16px

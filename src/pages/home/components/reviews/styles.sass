@@ -4,27 +4,29 @@
     font-size: 1.75rem 
     background-color: $dark-blue
     color: $white
-    padding: 5%
+    padding: 30px
 
     h1
         text-align: center
 
     .container
         position: relative
-        padding: 5%
         display: grid
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
-        gap: 5rem
+        margin: 20px 0
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+        gap: 50px
         text-shadow: rgba(0, 0, 0, 0.445) 1.95px 1.95px 2.6px
 
         &::after
             content: ""
-            width: 95%
+            width: 100%
             height: .15em
             background: $white
             position: absolute
-            bottom: 0
-            left: 2.5%
+            bottom: -20px
+
+        .review
+            margin: 15px 0
 
         a 
             text-decoration: none
