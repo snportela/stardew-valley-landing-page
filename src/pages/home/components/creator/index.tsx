@@ -11,11 +11,13 @@ const Creator = () => {
   } = useContext(WebsiteContent);
   return (
     <div id="creator" className="creator section">
-      <h1>{creator.title}</h1>
-      <div className="container">
-        <img src={CALogo} alt="ConcernedApe" />
+      <div className="content">
+        <h1>{creator.title}</h1>
+        <div className="container">
+          <img src={CALogo} alt="ConcernedApe" />
 
-        <p>{creator.text}</p>
+          <p>{creator.text}</p>
+        </div>
       </div>
     </div>
   );

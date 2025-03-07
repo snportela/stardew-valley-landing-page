@@ -11,17 +11,19 @@ const Languages = () => {
 
   return (
     <div id="languages" className="languages section">
-      <h1>{languages.title}</h1>
-      <ul>
-        {languages.languagesList.map((item, index) => {
-          return (
-            <li key={index}>
-              <img src={item.image} />
-              {item.name}
-            </li>
-          );
-        })}
-      </ul>
+      <div className="content">
+        <h1>{languages.title}</h1>
+        <ul>
+          {languages.languagesList.map((item, index) => {
+            return (
+              <li key={index}>
+                <img src={item.image} />
+                {item.name}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 };

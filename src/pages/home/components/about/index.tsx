@@ -11,20 +11,22 @@ const About = () => {
 
   return (
     <div id="about" className="about section">
-      <div className="description">
-        <h1 dangerouslySetInnerHTML={{ __html: about.title }}></h1>
-        <h2>{about.subtitle}</h2>
-      </div>
+      <div className="content">
+        <div className="description">
+          <h1 dangerouslySetInnerHTML={{ __html: about.title }}></h1>
+          <h2>{about.subtitle}</h2>
+        </div>
 
-      <div className="features">
-        {about.features.map((feature, index) => {
-          return (
-            <div key={index}>
-              <img src={feature.image} />
-              <p>{feature.description}</p>
-            </div>
-          );
-        })}
+        <div className="features">
+          {about.features.map((feature, index) => {
+            return (
+              <div key={index}>
+                <img src={feature.image} />
+                <p>{feature.description}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

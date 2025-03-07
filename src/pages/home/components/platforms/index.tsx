@@ -11,12 +11,14 @@ const Platforms = () => {
 
   return (
     <div id="platforms" className="platforms section">
-      <h1>{platforms.title}</h1>
+      <div className="content">
+        <h1>{platforms.title}</h1>
 
-      <div className="container">
-        {platforms.images.map((item, index) => {
-          return <img key={index} src={item} />;
-        })}
+        <div className="container">
+          {platforms.images.map((item, index) => {
+            return <img key={index} src={item} />;
+          })}
+        </div>
       </div>
     </div>
   );
