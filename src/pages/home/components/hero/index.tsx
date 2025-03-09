@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import HeroLogo from "/assets/images/main_logo.png";
 import Parallax from "/assets/images/parallax4.png";
-import Divider from "/assets/images/sdv_divider.png";
+import Divider from "/assets/images/sdv_divider-s.png";
 import Cloud from "/assets/images/cloud.png";
 import Bird from "/assets/images/stardew_bird.gif";
 import "./styles.sass";
