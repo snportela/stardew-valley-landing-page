@@ -10,7 +10,6 @@ import Bird from "/assets/images/stardew_bird.gif";
 import "./styles.sass";
 
 const Hero = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [offsetY, setOffsetY] = useState(0);
 
   const handleScroll = () => {
@@ -36,7 +35,7 @@ const Hero = () => {
           className="background"
           src={'https://stardewvalley.net/wp-content/themes/stardewvalley/images/parallax/parallax1.png'}
           alt="background"
-          style={{ transform: `translateY(-${offsetY / 8}px)` }}
+          style={{ transform: `translateY(-${offsetY / 5}px)` }}
           // style={{ transform: `translateY(-${offsetY * 0.12}px)` }}
           // style={{ bottom:  }}
         />
@@ -64,7 +63,7 @@ const Hero = () => {
           className="mountains mountains-back"
           src={Parallax}
           alt="Mountain background"
-          style={{ transform: `translateY(${offsetY / 4}px)` }}
+          style={{ transform: `translateY(${offsetY / 3.6}px)` }}
           // style={{ transform: `translateY(-${offsetY * 0.08}px)` }}
           // style={{ bottom:  }}
         />
@@ -72,7 +71,7 @@ const Hero = () => {
           className="mountains mountains-middle"
           src={Parallax3}
           alt="Mountain background"
-          style={{ transform: `translateY(${offsetY / 6.5}px)` }}
+          style={{ transform: `translateY(${offsetY / 6.2}px)` }}
           // style={{ transform: `translateY(-${offsetY * 0.12}px)` }}
           // style={{ bottom:  }}
         />
