@@ -17,7 +17,6 @@ html
   overflow-x: hidden
   cursor: url("/assets/icons/stardew_cursor.png"), auto
 
-
 body
   background-color: $dark-blue
 
@@ -26,6 +25,22 @@ body
   max-width: 1500px
   margin: 0 auto
   overflow: hidden
+
+.disable-select 
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -o-user-select: none
+  user-select: none
+  pointer-events: none
+
+  *
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -o-user-select: none
+    user-select: none
+    pointer-events: none
 
 @media screen and (max-width: 1366px)
   .content

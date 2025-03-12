@@ -24,7 +24,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hero-container section">
+    <div className="hero-container section disable-select">
       <div className="hero">
         <img
           className="hero-logo"
